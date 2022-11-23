@@ -26,7 +26,7 @@ public class RateLimiterTest extends Thread{
             }
         };
         t1.start();
-        Thread.sleep(30000);
+        Thread.sleep(3000);
         // the token should be consumed within first 30s leaving the thread in blocked state as it'd be waiting for 
         // next token to be available
         assertEquals(t1.getState().toString(),"TIMED_WAITING");
